@@ -1,0 +1,43 @@
+<!-- 我的申请页 -->
+<view class="apply-page">
+  <view class="card apply-item" wx:for="{{applies}}" wx:key="id">
+    <view class="apply-head" bindtap="goDetail" data-id="{{item.petId}}">
+      <image class="apply-cover" src="{{item.coverUrl}}" mode="aspectFill" />
+      <view class="apply-info">
+        <view class="apply-pet">{{item.petName}}</view>
+        <view class="apply-time">申请时间：{{item.createTime}}</view>
+        <view class="apply-status {{['pending', 'pass', 'reject', 'cancel'][item.status]}}">
+          {{['待审核', '已通过', '已驳回', '已取消'][item.status]}}
+        </view>
+      </view>
+    </view>
+
+    <view class="apply-body">
+      <view class="apply-row">
+        <text class="row-label">领养理由</text>
+        <text class="row-value">{{item.reason}}</text>
+      </view>
+      <view class="apply-row">
+        <text class="row-label">居住地址</text>
+        <text class="row-value">{{item.address}}</text>
+      </view>
+      <view class="apply-row">
+        <text class="row-label">联系电话</text>
+        <text class="row-value">{{item.phone}}</text>
+      </view>
+      <view class="apply-row" wx:if="{{item.auditRemark}}">
+        <text class="row-label">审核备注</text>
+        <text class="row-value">{{item.auditRemark}}</text>
+      </view>
+    </view>
+
+    <view class="apply-actions" wx:if="{{item.status === 0}}">
+      <view class="action-btn cancel" catchtap="cancelApply" data-id="{{item.id}}">取消申请</view>
+    </view>
+  </view>
+
+  <view class="empty-tip" wx:if="{{!applies.length && !loading}}">
+    <text class="empty-icon">📋</text>
+    <text>还没有提交过领养申请，快去挑选心仪的宠物吧</text>
+  </view>
+</view>

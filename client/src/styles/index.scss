@@ -1,0 +1,177 @@
+/* ================= 全局样式：Java1234 宠物领养系统管理后台 ================= */
+
+/* CSS 变量：统一管理主题色与圆角阴影 */
+:root {
+  --primary: #ff7a45;
+  --primary-light: #ff9c6e;
+  --secondary: #36cfc9;
+  --success: #52c41a;
+  --warning: #faad14;
+  --danger: #ff4d4f;
+  --info: #597ef7;
+  --text-main: #2f3542;
+  --text-sub: #8a94a6;
+  --bg-page: #f4f6fb;
+  --bg-card: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(31, 45, 61, 0.08);
+  --shadow-hover: 0 12px 30px rgba(31, 45, 61, 0.14);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d9e2;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b9c0cd;
+}
+
+/* 通用卡片：统一的圆角与阴影 */
+.pet-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 页面容器 */
+.page-container {
+  padding: 18px 22px;
+}
+
+/* 页面标题栏 */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+
+  .page-title {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    padding-left: 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 22px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+    }
+  }
+
+  .page-desc {
+    font-size: 13px;
+    color: var(--text-sub);
+    margin-top: 4px;
+  }
+}
+
+/* 搜索栏 */
+.search-bar {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px 4px;
+  margin-bottom: 16px;
+}
+
+/* 表格区域 */
+.table-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+/* Element Plus 表格美化 */
+.el-table {
+  border-radius: 8px;
+
+  th.el-table__cell {
+    background: #f7f9fc !important;
+    color: #5a6478;
+    font-weight: 600;
+  }
+}
+
+.el-table .el-table__row:hover > td.el-table__cell {
+  background: #fdf6f1 !important;
+}
+
+/* 表格内宠物缩略图 */
+.pet-thumb {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* 空状态 */
+.empty-box {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+/* 分页 */
+.pagination-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* 动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.45s ease;
+}

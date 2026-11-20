@@ -1,0 +1,411 @@
+/* 宠物详情页样式 */
+.detail-page {
+  min-height: 100vh;
+  padding-bottom: 160rpx;
+}
+
+/* 图片轮播 */
+.cover-swiper {
+  height: 620rpx;
+  background: #f2f4f8;
+}
+
+.cover-img {
+  width: 100%;
+  height: 620rpx;
+}
+
+/* 基础信息卡片 */
+.info-card {
+  margin: -40rpx 24rpx 0;
+  position: relative;
+  z-index: 5;
+  padding: 28rpx;
+}
+
+.info-top {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.pet-name {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.pet-gender {
+  font-size: 22rpx;
+  padding: 6rpx 20rpx;
+  border-radius: 24rpx;
+
+  &.girl {
+    background: rgba(255, 122, 69, 0.12);
+    color: #ff7a45;
+  }
+
+  &.boy {
+    background: rgba(54, 207, 201, 0.14);
+    color: #13a8a3;
+  }
+}
+
+.pet-status {
+  margin-left: auto;
+  font-size: 22rpx;
+  padding: 6rpx 20rpx;
+  border-radius: 24rpx;
+
+  &.wait {
+    background: rgba(82, 196, 26, 0.12);
+    color: #52c41a;
+  }
+
+  &.done {
+    background: #f1f3f8;
+    color: var(--text-sub);
+  }
+}
+
+.info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 20rpx;
+}
+
+.info-tag {
+  font-size: 22rpx;
+  color: #6b7688;
+  background: #f5f7fb;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22rpx;
+  padding-top: 20rpx;
+  border-top: 1px dashed #f0f2f7;
+}
+
+.price {
+  font-size: 32rpx;
+  font-weight: 700;
+
+  &.free {
+    color: #52c41a;
+  }
+
+  &.has-price {
+    color: var(--primary);
+  }
+}
+
+.publisher {
+  font-size: 22rpx;
+  color: var(--text-sub);
+}
+
+/* 通用区块卡片 */
+.block-card {
+  margin: 22rpx 24rpx 0;
+  padding: 26rpx 28rpx;
+}
+
+.block-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 20rpx;
+}
+
+/* 健康档案 */
+.health-row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.health-item {
+  flex: 1;
+  background: #f7f9fc;
+  border-radius: 18rpx;
+  padding: 18rpx 8rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+
+  &.done {
+    background: linear-gradient(135deg, #f0fff4, #e6f7ff);
+  }
+}
+
+.health-icon {
+  font-size: 34rpx;
+}
+
+.health-text {
+  font-size: 20rpx;
+  color: var(--text-sub);
+}
+
+.health-item.done .health-text {
+  color: #52c41a;
+  font-weight: 600;
+}
+
+.health-desc {
+  margin-top: 18rpx;
+  font-size: 24rpx;
+  color: #6b7688;
+  line-height: 1.8;
+}
+
+/* 详细介绍 */
+.detail-desc {
+  font-size: 26rpx;
+  color: #5c6675;
+  line-height: 2;
+}
+
+/* 留言区 */
+.comment-list {
+  margin-bottom: 10rpx;
+}
+
+.comment-item {
+  display: flex;
+  gap: 16rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f5f7fb;
+}
+
+.comment-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #85a5ff, #597ef7);
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.comment-body {
+  flex: 1;
+}
+
+.comment-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-name {
+  font-size: 25rpx;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.comment-time {
+  font-size: 20rpx;
+  color: #b6bdc9;
+}
+
+.comment-content {
+  font-size: 24rpx;
+  color: #5c6675;
+  line-height: 1.7;
+  margin-top: 8rpx;
+}
+
+/* 留言输入 */
+.comment-input {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-top: 22rpx;
+}
+
+.comment-field {
+  flex: 1;
+  height: 76rpx;
+  background: #f5f7fb;
+  border-radius: 38rpx;
+  padding: 0 26rpx;
+  font-size: 25rpx;
+}
+
+.comment-send {
+  background: linear-gradient(135deg, #ff7a45, #ff9c6e);
+  color: #fff;
+  font-size: 25rpx;
+  padding: 18rpx 34rpx;
+  border-radius: 38rpx;
+}
+
+/* 底部操作栏 */
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 0 26rpx;
+  box-shadow: 0 -6rpx 24rpx rgba(31, 45, 61, 0.08);
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 20;
+}
+
+.bar-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rpx;
+  width: 92rpx;
+}
+
+.bar-icon-text {
+  font-size: 38rpx;
+
+  &.active {
+    animation: beat 0.4s ease;
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bar-label {
+  font-size: 20rpx;
+  color: var(--text-sub);
+}
+
+.apply-btn {
+  flex: 1;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  border-radius: 42rpx;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff7a45, #ff9c6e);
+  box-shadow: 0 8rpx 20rpx rgba(255, 122, 69, 0.35);
+}
+
+/* 弹窗遮罩 */
+.mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(20, 26, 38, 0.55);
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+}
+
+.apply-panel {
+  width: 100%;
+  background: #fff;
+  border-radius: 36rpx 36rpx 0 0;
+  padding: 36rpx 32rpx calc(env(safe-area-inset-bottom) + 30rpx);
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.panel-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.panel-tip {
+  font-size: 22rpx;
+  color: var(--text-sub);
+  margin: 10rpx 0 26rpx;
+}
+
+.form-item {
+  margin-bottom: 24rpx;
+}
+
+.form-label {
+  font-size: 25rpx;
+  color: var(--text-main);
+  margin-bottom: 12rpx;
+  display: block;
+  font-weight: 600;
+}
+
+.required {
+  color: #ff4d4f;
+  margin-left: 4rpx;
+}
+
+.form-input {
+  height: 82rpx;
+  background: #f5f7fb;
+  border-radius: 16rpx;
+  padding: 0 24rpx;
+  font-size: 25rpx;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 160rpx;
+  background: #f5f7fb;
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  font-size: 25rpx;
+  line-height: 1.7;
+}
+
+.panel-actions {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 34rpx;
+}
+
+.panel-btn {
+  flex: 1;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  border-radius: 43rpx;
+  font-size: 29rpx;
+
+  &.cancel {
+    background: #f2f4f8;
+    color: var(--text-sub);
+  }
+
+  &.confirm {
+    background: linear-gradient(135deg, #ff7a45, #ff9c6e);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 8rpx 20rpx rgba(255, 122, 69, 0.32);
+  }
+}

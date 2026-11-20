@@ -1,0 +1,801 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.java1234:server >-------------------------
+[INFO] Building Java1234å¾®ä¿¡å°ç¨‹åºå® ç‰©é¢†å…»ç³»ç»Ÿ-åŽç«¯æœåŠ¡ 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.9:run (default-cli) > test-compile @ server >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ server ---
+[INFO] skip non existing resourceDirectory E:\sys\sys1\server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.9:run (default-cli) < test-compile @ server <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.9:run (default-cli) @ server ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.9)
+
+2026-11-19T14:24:31.887+08:00  INFO 290368 --- [pet-adoption-server] [           main] com.java1234.ServerApplication           : Starting ServerApplication using Java 21.0.10 with PID 290368 (E:\sys\sys1\server\target\classes started by HP in E:\sys\sys1\server)
+2026-11-19T14:24:31.890+08:00  INFO 290368 --- [pet-adoption-server] [           main] com.java1234.ServerApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T14:24:32.650+08:00  INFO 290368 --- [pet-adoption-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-19T14:24:32.662+08:00  INFO 290368 --- [pet-adoption-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-19T14:24:32.663+08:00  INFO 290368 --- [pet-adoption-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-19T14:24:32.705+08:00  INFO 290368 --- [pet-adoption-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 770 ms
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Get /10.105.174.220 network interface 
+Get network interface info: name:wireless_32768 (Intel(R) Wi-Fi 6E AX211 160MHz)
+Initialization Sequence datacenterId:3 workerId:31
+2026-11-19T14:24:33.224+08:00  WARN 290368 --- [pet-adoption-server] [           main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8e833f45-a684-4373-b133-976d14c06be6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-19T14:24:33.228+08:00  INFO 290368 --- [pet-adoption-server] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-19T14:24:33.448+08:00  INFO 290368 --- [pet-adoption-server] [           main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@59f63e24
+2026-11-19T14:24:33.519+08:00  INFO 290368 --- [pet-adoption-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-19T14:24:33.522+08:00  INFO 290368 --- [pet-adoption-server] [           main] com.java1234.ServerApplication           : Started ServerApplication in 1.95 seconds (process running for 2.209)
+2026-11-19T14:25:07.394+08:00  INFO 290368 --- [pet-adoption-server] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-19T14:25:07.395+08:00  INFO 290368 --- [pet-adoption-server] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-19T14:25:07.395+08:00  INFO 290368 --- [pet-adoption-server] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-19T14:25:07.430+08:00  INFO 290368 --- [pet-adoption-server] [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T14:25:07.528+08:00  INFO 290368 --- [pet-adoption-server] [nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a8a0847
+2026-11-19T14:25:07.529+08:00  INFO 290368 --- [pet-adoption-server] [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+==>  Preparing: SELECT COUNT( * ) AS total FROM sys_user WHERE deleted=0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 6
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM sys_user WHERE deleted=0 AND (create_time >= ?)
+==> Parameters: 2026-11-19T00:00(LocalDateTime)
+<==    Columns: total
+<==        Row: 6
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM pet WHERE deleted=0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 12
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM pet WHERE deleted=0 AND (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: total
+<==        Row: 11
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM pet WHERE deleted=0 AND (status = ?)
+==> Parameters: 2(Integer)
+<==    Columns: total
+<==        Row: 1
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM pet WHERE deleted=0 AND (create_time >= ?)
+==> Parameters: 2026-11-19T00:00(LocalDateTime)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM adopt_apply WHERE deleted=0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 8
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM adopt_apply WHERE deleted=0 AND (status = ?)
+==> Parameters: 0(Integer)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM adopt_apply WHERE deleted=0 AND (create_time >= ?)
+==> Parameters: 2026-11-19T00:00(LocalDateTime)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM adopt_apply WHERE deleted=0 AND (status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM adopt_apply WHERE deleted=0 AND (status IN (?,?))
+==> Parameters: 1(Integer), 2(Integer)
+<==    Columns: total
+<==        Row: 4
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 1, admin, 123456, ÏµÍ³¹ÜÀíÔ±, /uploads/avatar/admin.png, 13800000001, ÄÐ, ±±¾©, Æ½Ì¨¹ÜÀíÔ±£¬¸ºÔðÄÚÈÝÉóºËÓëÐÅÏ¢Î¬»¤, admin, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT(*) AS total FROM adopt_apply WHERE deleted = 0 AND (status = ?)
+==> Parameters: 0(Integer)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 0(Integer), 5(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 8, 12, 3, Ïë¸ø°ì¹«ÊÒÌíÒ»Ö»Ð¡¿É°®£¬»º½â¼Ó°àÑ¹Á¦¡£, ÉÏº£ÊÐ¾²°²ÇøÄÏ¾©Î÷Â·9ºÅ, 13800000003, Ï²»¶Ð¡¶¯Îï, 0, null, 2026-11-18 13:05:00, 2026-11-19 13:51:39, 0
+<==        Row: 5, 6, 6, ¸Õ±ÏÒµ¹¤×÷ÎÈ¶¨£¬ÏëÑøÒ»Ö»éÙÃ¨Åã°é¼Ó°àµÄ×Ô¼º¡£, ³É¶¼ÊÐÎäºîÇøÌì¸®´óµÀ1ºÅ, 13800000006, ÎÞ¾­Ñé£¬Ô¸ÒâÑ§Ï°, 0, null, 2026-11-16 20:15:00, 2026-11-19 13:51:39, 0
+<==        Row: 3, 3, 5, ÓÐ¶ÀÁ¢×¡·¿£¬ÊÒÄÚÃæ»ý120Æ½£¬ÊÊºÏÑø´óÐÍÈ®¡£, ¹ãÖÝÊÐÌìºÓÇøÌåÓýÎ÷Â·20ºÅ, 13800000005, Ñø¹ý½ðÃ«ÎåÄê, 0, null, 2026-11-15 14:10:00, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 AND (id IN (?,?,?))
+==> Parameters: 12(Long), 6(Long), 3(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 3, ¿É¿É, 1, 5¸öÔÂ, µÜµÜ, ¹ãÖÝ, 0.00, ½¡¿µ£¬Ó×È®´ýÇý³æ, Ð¡¿Â»ùÒ»Ö»£¬Æ¨¹É´óÁ³¿É°®£¬»îÆÃºÃ¶¯£¬Ï²»¶ºÍÈËÍæÇò£¬×î°®ºúÂÜ²·¡£, /uploads/pet/keke.jpg, 1, 0, 0, 1, 276, 4, 2026-10-05 09:30:00, 2026-11-19 13:51:39, 0
+<==        Row: 6, ÍÅ×Ó, 2, 3¸öÔÂ, ÃÃÃÃ, º¼ÖÝ, 0.00, ½¡¿µ£¬Ó×Ã¨´ý½ÓÖÖ, éÙÉ«Ð¡ÍÅ×Ó£¬Ô²¹ö¹öµÄÌØ±ðÄÜ³Ô£¬¼ûÈË¾Íß÷ß÷½Ð£¬Õ³ÈËµÃºÜ¡£, /uploads/pet/tuanzi.jpg, 1, 0, 0, 1, 389, 5, 2026-10-11 08:50:00, 2026-11-19 13:51:39, 0
+<==        Row: 12, ¶¹¶¹, 4, 1Ëê, µÜµÜ, ³¤É³, 0.00, ½¡¿µ£¬ÒÑÇý³æ, Ò»Ö»º©º©µÄÐ¡²ÖÊó£¬ÅÖºõºõµÄÏ²»¶¶ÚÊ³£¬ÉúÃüÁ¦ºÜÍçÇ¿£¬ºÃÑø»î¡£, /uploads/pet/doudou.jpg, 1, 1, 0, 1, 88, 2, 2026-10-23 17:35:00, 2026-11-19 14:23:48, 0
+<==      Total: 3
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?,?,?))
+==> Parameters: 3(Long), 6(Long), 5(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 5, zhaoliu, 123456, ÕÔÁù, /uploads/avatar/zhaoliu.png, 13800000005, Å®, º¼ÖÝ, ÉÏ°à×å£¬Ï²»¶Ð¡¶¯Îï, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 6, sunqi, 123456, ËïÆß, /uploads/avatar/sunqi.png, 13800000006, ÄÐ, ³É¶¼, ÕýÔÚÎªÁ÷ÀËÃ¨Ñ°ÕÒÎÂÅ¯µÄ¼Ò, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE id=? AND deleted=0
+==> Parameters: 8(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 8, 12, 3, Ïë¸ø°ì¹«ÊÒÌíÒ»Ö»Ð¡¿É°®£¬»º½â¼Ó°àÑ¹Á¦¡£, ÉÏº£ÊÐ¾²°²ÇøÄÏ¾©Î÷Â·9ºÅ, 13800000003, Ï²»¶Ð¡¶¯Îï, 0, null, 2026-11-18 13:05:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: UPDATE adopt_apply SET pet_id=?, user_id=?, reason=?, address=?, phone=?, experience=?, status=?, audit_remark=?, create_time=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: 12(Long), 3(Long), Ïë¸ø°ì¹«ÊÒÌíÒ»Ö»Ð¡¿É°®£¬»º½â¼Ó°àÑ¹Á¦¡£(String), ÉÏº£ÊÐ¾²°²ÇøÄÏ¾©Î÷Â·9ºÅ(String), 13800000003(String), Ï²»¶Ð¡¶¯Îï(String), 1(Integer), test(String), 2026-11-18T13:05(LocalDateTime), 2026-11-19T14:25:14.285458300(LocalDateTime), 8(Long)
+<==    Updates: 1
+==>  Preparing: UPDATE pet SET status=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: 2(Integer), 2026-11-19T14:25:14.290556500(LocalDateTime), 12(Long)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 1, admin, 123456, ÏµÍ³¹ÜÀíÔ±, /uploads/avatar/admin.png, 13800000001, ÄÐ, ±±¾©, Æ½Ì¨¹ÜÀíÔ±£¬¸ºÔðÄÚÈÝÉóºËÓëÐÅÏ¢Î¬»¤, admin, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 12(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 12, ¶¹¶¹, 4, 1Ëê, µÜµÜ, ³¤É³, 0.00, ½¡¿µ£¬ÒÑÇý³æ, Ò»Ö»º©º©µÄÐ¡²ÖÊó£¬ÅÖºõºõµÄÏ²»¶¶ÚÊ³£¬ÉúÃüÁ¦ºÜÍçÇ¿£¬ºÃÑø»î¡£, /uploads/pet/doudou.jpg, 1, 1, 0, 2, 88, 2, 2026-10-23 17:35:00, 2026-11-19 14:25:14, 0
+<==      Total: 1
+==>  Preparing: UPDATE pet SET view_count=? WHERE id=? AND deleted=0
+==> Parameters: 89(Integer), 12(Long)
+<==    Updates: 1
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?))
+==> Parameters: 4(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 4, ÆäËû, ?, ÆäËû¿É°®µÄÐ¡¶¯Îï£¬Í¬ÑùÖµµÃ±»°®, 4, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?))
+==> Parameters: 2(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM favorite WHERE deleted=0 AND (user_id = ? AND pet_id = ?)
+==> Parameters: 1(Long), 12(Long)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,url,sort,create_time,deleted FROM pet_image WHERE deleted=0 AND (pet_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, pet_id, url, sort, create_time, deleted
+<==        Row: 16, 12, /uploads/pet/doudou.jpg, 1, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT(*) AS total FROM pet WHERE deleted = 0 AND (user_id = ?)
+==> Parameters: 2(Long)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 AND (user_id = ?) ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 2(Long), 100(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 12, ¶¹¶¹, 4, 1Ëê, µÜµÜ, ³¤É³, 0.00, ½¡¿µ£¬ÒÑÇý³æ, Ò»Ö»º©º©µÄÐ¡²ÖÊó£¬ÅÖºõºõµÄÏ²»¶¶ÚÊ³£¬ÉúÃüÁ¦ºÜÍçÇ¿£¬ºÃÑø»î¡£, /uploads/pet/doudou.jpg, 1, 1, 0, 2, 89, 2, 2026-10-23 17:35:00, 2026-11-19 14:25:14, 0
+<==        Row: 8, ÉÁµç, 2, 6¸öÔÂ, µÜµÜ, ÉÏº£, 0.00, ½¡¿µ£¬Ó×Ã¨´ýÇý³æ, Àê»¨Ã¨Ò»Ö»£¬¾«Á¦ÍúÊ¢°ëÒ¹ÅÜ¿á£¬µ«°×Ìì»á¹Ô¹ÔÅ¿ÔÚÄãÍÈÉÏË¯¾õ¡£, /uploads/pet/shandian.jpg, 1, 0, 1, 1, 297, 2, 2026-10-15 13:25:00, 2026-11-19 13:51:39, 0
+<==        Row: 1, ÄÌÌÇ, 1, 8¸öÔÂ, ÃÃÃÃ, ÉÏº£, 0.00, ½¡¿µ£¬ÒÑ½ÓÖÖÈýÕëÒßÃç, Æ¯ÁÁµÄ²¼Å¼ÃÃÃÃ£¬ÐÔ¸ñÎÂË³Õ³ÈË£¬Ï²»¶±»±§£¬ÊÊºÏÓÐÅã°éÊ±¼äµÄÖ÷ÈË¡£, /uploads/pet/naitang.jpg, 1, 1, 1, 1, 328, 2, 2026-10-01 10:00:00, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?,?,?))
+==> Parameters: 4(Long), 2(Long), 1(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 1, ¹·¹·, ?, ÖÒ³Ï¿É°®µÄ¹·¹·£¬µÈ´ýÒ»¸öÎÂÅ¯µÄ¼Ò, 1, 2026-11-19 13:51:39, 0
+<==        Row: 2, Ã¨ßä, ?, ÈíÃÈÕ³ÈËµÄÃ¨ßä£¬¸øÄãÎÞ¾¡µÄÖÎÓú, 2, 2026-11-19 13:51:39, 0
+<==        Row: 4, ÆäËû, ?, ÆäËû¿É°®µÄÐ¡¶¯Îï£¬Í¬ÑùÖµµÃ±»°®, 4, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?))
+==> Parameters: 2(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,url,sort,create_time,deleted FROM pet_image WHERE deleted=0 AND (pet_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, pet_id, url, sort, create_time, deleted
+<==        Row: 16, 12, /uploads/pet/doudou.jpg, 1, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,url,sort,create_time,deleted FROM pet_image WHERE deleted=0 AND (pet_id = ?) ORDER BY sort ASC
+==> Parameters: 8(Long)
+<==    Columns: id, pet_id, url, sort, create_time, deleted
+<==        Row: 12, 8, /uploads/pet/shandian.jpg, 1, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,url,sort,create_time,deleted FROM pet_image WHERE deleted=0 AND (pet_id = ?) ORDER BY sort ASC
+==> Parameters: 1(Long)
+<==    Columns: id, pet_id, url, sort, create_time, deleted
+<==        Row: 1, 1, /uploads/pet/naitang.jpg, 1, 2026-11-19 13:51:39, 0
+<==        Row: 2, 1, /uploads/pet/naitang2.jpg, 2, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE deleted=0 AND (user_id = ?) ORDER BY create_time DESC
+==> Parameters: 2(Long)
+<==      Total: 0
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,user_id,pet_id,create_time,deleted FROM favorite WHERE deleted=0 AND (user_id = ?) ORDER BY create_time DESC
+==> Parameters: 2(Long)
+<==    Columns: id, user_id, pet_id, create_time, deleted
+<==        Row: 10, 2, 4, 2026-10-08 09:10:00, 0
+<==        Row: 9, 2, 1, 2026-10-01 20:45:00, 0
+<==      Total: 2
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 4(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 4, °¢»Æ, 1, 4Ëê, µÜµÜ, ÉîÛÚ, 300.00, ½¡¿µ£¬Äê¼ìÆëÈ«, Ò»Ö»ÖÒ³ÏµÄ½ðÃ«£¬µ¼Ã¤È®°ãÎÂË³£¬åÞÍäºó±Ø»ØÃÅ¿ÚµÈ£¬ÒÑ¾­´øÈ¥¹«Ô°ÎÞÊý´Î¡£, /uploads/pet/ahuang.jpg, 1, 1, 1, 2, 641, 5, 2026-10-07 16:45:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 1(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 1, ÄÌÌÇ, 1, 8¸öÔÂ, ÃÃÃÃ, ÉÏº£, 0.00, ½¡¿µ£¬ÒÑ½ÓÖÖÈýÕëÒßÃç, Æ¯ÁÁµÄ²¼Å¼ÃÃÃÃ£¬ÐÔ¸ñÎÂË³Õ³ÈË£¬Ï²»¶±»±§£¬ÊÊºÏÓÐÅã°éÊ±¼äµÄÖ÷ÈË¡£, /uploads/pet/naitang.jpg, 1, 1, 1, 1, 328, 2, 2026-10-01 10:00:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,user_id,content,status,create_time,deleted FROM comment WHERE deleted=0 AND (pet_id = ? AND status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: id, pet_id, user_id, content, status, create_time, deleted
+<==        Row: 2, 1, 4, ºÃ¹ÔµÄÐ¡Ã¨£¬¿´×ÅÕÕÆ¬¶¼ÏëruaÒ»°Ñ¡£, 1, 2026-10-03 09:40:00, 0
+<==        Row: 1, 1, 3, ²¼Å¼ÃÃÃÃºÃ¿É°®£¬ÒÑ¾­Ìá½»ÉêÇëÀ²£¬Ï£ÍûÄÜÁìÑø³É¹¦£¡, 1, 2026-10-02 15:12:00, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?,?))
+==> Parameters: 4(Long), 3(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 4, wangwu, 123456, ÍõÎå, /uploads/avatar/wangwu.png, 13800000004, ÄÐ, ÉîÛÚ, Ï£ÍûÁìÑøÒ»Ö»½ðÃ«£¬¸øº¢×Ó×ö¸ö»ï°é, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 3(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 3, ¿É¿É, 1, 5¸öÔÂ, µÜµÜ, ¹ãÖÝ, 0.00, ½¡¿µ£¬Ó×È®´ýÇý³æ, Ð¡¿Â»ùÒ»Ö»£¬Æ¨¹É´óÁ³¿É°®£¬»îÆÃºÃ¶¯£¬Ï²»¶ºÍÈËÍæÇò£¬×î°®ºúÂÜ²·¡£, /uploads/pet/keke.jpg, 1, 0, 0, 1, 276, 4, 2026-10-05 09:30:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM adopt_apply WHERE deleted=0 AND (pet_id = ? AND user_id = ? AND status IN (?,?))
+==> Parameters: 3(Long), 2(Long), 0(Integer), 1(Integer)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+==>  Preparing: INSERT INTO adopt_apply ( pet_id, user_id, reason, address, phone, experience, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: 3(Long), 2(Long), ?????????(String), ???????(String), 13800000001(String), ????(String), 0(Integer), 2026-11-19T14:25:29.438655800(LocalDateTime), 2026-11-19T14:25:29.438655800(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: INSERT INTO comment ( pet_id, user_id, content, status, create_time ) VALUES ( ?, ?, ?, ?, ? )
+==> Parameters: 3(Long), 2(Long), ?????!(String), 1(Integer), 2026-11-19T14:25:29.459687200(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM favorite WHERE deleted=0 AND (user_id = ? AND pet_id = ?)
+==> Parameters: 2(Long), 5(Long)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+==>  Preparing: INSERT INTO favorite ( user_id, pet_id, create_time ) VALUES ( ?, ?, ? )
+==> Parameters: 2(Long), 5(Long), 2026-11-19T14:25:29.472467(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE deleted=0 AND (user_id = ?) ORDER BY create_time DESC
+==> Parameters: 2(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 9, 3, 2, ?????????, ???????, 13800000001, ????, 0, null, 2026-11-19 14:25:29, 2026-11-19 14:25:29, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 AND (id IN (?))
+==> Parameters: 3(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 3, ¿É¿É, 1, 5¸öÔÂ, µÜµÜ, ¹ãÖÝ, 0.00, ½¡¿µ£¬Ó×È®´ýÇý³æ, Ð¡¿Â»ùÒ»Ö»£¬Æ¨¹É´óÁ³¿É°®£¬»îÆÃºÃ¶¯£¬Ï²»¶ºÍÈËÍæÇò£¬×î°®ºúÂÜ²·¡£, /uploads/pet/keke.jpg, 1, 0, 0, 1, 276, 4, 2026-10-05 09:30:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: zhangsan(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,user_id,pet_id,create_time,deleted FROM favorite WHERE deleted=0 AND (user_id = ?) ORDER BY create_time DESC
+==> Parameters: 2(Long)
+<==    Columns: id, user_id, pet_id, create_time, deleted
+<==        Row: 11, 2, 5, 2026-11-19 14:25:29, 0
+<==        Row: 10, 2, 4, 2026-10-08 09:10:00, 0
+<==        Row: 9, 2, 1, 2026-10-01 20:45:00, 0
+<==      Total: 3
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 5(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 5, ÃºÇò, 2, 1Ëê, µÜµÜ, ³É¶¼, 0.00, ½¡¿µ£¬ÒÑ¾øÓý, Ò»Ö»´¿ºÚµÄÐ¡ÃºÇò£¬°²¾²¸ßÀäµ«ÆäÊµºÜð¤ÈË£¬Ï²»¶É¹Ì«ÑôºÍÖ½Ïä¡£, /uploads/pet/meiqiu.jpg, 1, 1, 1, 1, 405, 6, 2026-10-09 11:10:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 4(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 4, °¢»Æ, 1, 4Ëê, µÜµÜ, ÉîÛÚ, 300.00, ½¡¿µ£¬Äê¼ìÆëÈ«, Ò»Ö»ÖÒ³ÏµÄ½ðÃ«£¬µ¼Ã¤È®°ãÎÂË³£¬åÞÍäºó±Ø»ØÃÅ¿ÚµÈ£¬ÒÑ¾­´øÈ¥¹«Ô°ÎÞÊý´Î¡£, /uploads/pet/ahuang.jpg, 1, 1, 1, 2, 641, 5, 2026-10-07 16:45:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 1(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 1, ÄÌÌÇ, 1, 8¸öÔÂ, ÃÃÃÃ, ÉÏº£, 0.00, ½¡¿µ£¬ÒÑ½ÓÖÖÈýÕëÒßÃç, Æ¯ÁÁµÄ²¼Å¼ÃÃÃÃ£¬ÐÔ¸ñÎÂË³Õ³ÈË£¬Ï²»¶±»±§£¬ÊÊºÏÓÐÅã°éÊ±¼äµÄÖ÷ÈË¡£, /uploads/pet/naitang.jpg, 1, 1, 1, 1, 328, 2, 2026-10-01 10:00:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: lisi(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: lisi(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: INSERT INTO comment ( pet_id, user_id, content, status, create_time ) VALUES ( ?, ?, ?, ?, ? )
+==> Parameters: 4(Long), 3(Long), ????(String), 1(Integer), 2026-11-19T14:25:37.860179200(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: lisi(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: lisi(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: INSERT INTO pet ( name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: ????(String), 1(Long), 6??(String), ??(String), ???(String), 0(BigDecimal), ??(String), ?????????(String), /uploads/pet/keke.jpg(String), 1(Integer), 0(Integer), 1(Integer), 1(Integer), 0(Integer), 3(Long), 2026-11-19T14:25:44.441917600(LocalDateTime), 2026-11-19T14:25:44.441917600(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: INSERT INTO pet_image ( pet_id, url, sort, create_time ) VALUES ( ?, ?, ?, ? )
+==> Parameters: 13(Long), /uploads/pet/keke.jpg(String), 1(Integer), 2026-11-19T14:25:44.445935800(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: INSERT INTO pet_image ( pet_id, url, sort, create_time ) VALUES ( ?, ?, ?, ? )
+==> Parameters: 13(Long), /uploads/pet/keke2.jpg(String), 2(Integer), 2026-11-19T14:25:44.446938400(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: lisi(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 13(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 13, ????, 1, 6??, ??, ???, 0.00, ??, ?????????, /uploads/pet/keke.jpg, 1, 0, 1, 1, 0, 3, 2026-11-19 14:25:44, 2026-11-19 14:25:44, 0
+<==      Total: 1
+==>  Preparing: UPDATE pet SET view_count=? WHERE id=? AND deleted=0
+==> Parameters: 1(Integer), 13(Long)
+<==    Updates: 1
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?))
+==> Parameters: 1(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 1, ¹·¹·, ?, ÖÒ³Ï¿É°®µÄ¹·¹·£¬µÈ´ýÒ»¸öÎÂÅ¯µÄ¼Ò, 1, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?))
+==> Parameters: 3(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT( * ) AS total FROM favorite WHERE deleted=0 AND (user_id = ? AND pet_id = ?)
+==> Parameters: 3(Long), 13(Long)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,url,sort,create_time,deleted FROM pet_image WHERE deleted=0 AND (pet_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, pet_id, url, sort, create_time, deleted
+<==        Row: 17, 13, /uploads/pet/keke.jpg, 1, 2026-11-19 14:25:44, 0
+<==        Row: 18, 13, /uploads/pet/keke2.jpg, 2, 2026-11-19 14:25:44, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: anonymousUser(String)
+<==      Total: 0
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 13(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 13, ????, 1, 6??, ??, ???, 0.00, ??, ?????????, /uploads/pet/keke.jpg, 1, 0, 1, 1, 1, 3, 2026-11-19 14:25:44, 2026-11-19 14:25:44, 0
+<==      Total: 1
+==>  Preparing: UPDATE pet SET view_count=? WHERE id=? AND deleted=0
+==> Parameters: 2(Integer), 13(Long)
+<==    Updates: 1
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?))
+==> Parameters: 1(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 1, ¹·¹·, ?, ÖÒ³Ï¿É°®µÄ¹·¹·£¬µÈ´ýÒ»¸öÎÂÅ¯µÄ¼Ò, 1, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?))
+==> Parameters: 3(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,url,sort,create_time,deleted FROM pet_image WHERE deleted=0 AND (pet_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, pet_id, url, sort, create_time, deleted
+<==        Row: 17, 13, /uploads/pet/keke.jpg, 1, 2026-11-19 14:25:44, 0
+<==        Row: 18, 13, /uploads/pet/keke2.jpg, 2, 2026-11-19 14:25:44, 0
+<==      Total: 2
+==>  Preparing: SELECT COUNT( * ) AS total FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: testuser(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+==>  Preparing: INSERT INTO sys_user ( username, password, nickname, phone, role, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: testuser(String), 123456(String), ²âÊÔÓÃ»§(String), 13900000000(String), user(String), 1(Integer), 2026-11-19T14:25:51.344716200(LocalDateTime), 2026-11-19T14:25:51.344716200(LocalDateTime)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: anonymousUser(String)
+<==      Total: 0
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE id=? AND deleted=0
+==> Parameters: 13(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 13, ????, 1, 6??, ??, ???, 0.00, ??, ?????????, /uploads/pet/keke.jpg, 1, 0, 1, 1, 2, 3, 2026-11-19 14:25:44, 2026-11-19 14:25:51, 0
+<==      Total: 1
+==>  Preparing: UPDATE pet SET view_count=? WHERE id=? AND deleted=0
+==> Parameters: 3(Integer), 13(Long)
+<==    Updates: 1
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?))
+==> Parameters: 1(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 1, ¹·¹·, ?, ÖÒ³Ï¿É°®µÄ¹·¹·£¬µÈ´ýÒ»¸öÎÂÅ¯µÄ¼Ò, 1, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?))
+==> Parameters: 3(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,url,sort,create_time,deleted FROM pet_image WHERE deleted=0 AND (pet_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, pet_id, url, sort, create_time, deleted
+<==        Row: 17, 13, /uploads/pet/keke.jpg, 1, 2026-11-19 14:25:44, 0
+<==        Row: 18, 13, /uploads/pet/keke2.jpg, 2, 2026-11-19 14:25:44, 0
+<==      Total: 2
+==>  Preparing: SELECT COUNT(*) AS total FROM pet WHERE deleted = 0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 13
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 3(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 13, ????, 1, 6??, ??, ???, 0.00, ??, ?????????, /uploads/pet/keke.jpg, 1, 0, 1, 1, 3, 3, 2026-11-19 14:25:44, 2026-11-19 14:26:02, 0
+<==        Row: 12, ¶¹¶¹, 4, 1Ëê, µÜµÜ, ³¤É³, 0.00, ½¡¿µ£¬ÒÑÇý³æ, Ò»Ö»º©º©µÄÐ¡²ÖÊó£¬ÅÖºõºõµÄÏ²»¶¶ÚÊ³£¬ÉúÃüÁ¦ºÜÍçÇ¿£¬ºÃÑø»î¡£, /uploads/pet/doudou.jpg, 1, 1, 0, 2, 89, 2, 2026-10-23 17:35:00, 2026-11-19 14:25:14, 0
+<==        Row: 11, ßäßä, 4, 2Ëê, ÃÃÃÃ, Îäºº, 100.00, ½¡¿µ£¬ÒÑ¾øÓý, Ð¡ÇøÀï¼ñµ½µÄÐ¡»¨ßä£¬µ¨´ó°üÌì£¬Ò»µã²»ÅÂÈË£¬ÈÏÖ÷ºóÌØ±ðð¤ÈË¡£, /uploads/pet/mimi.jpg, 1, 1, 1, 1, 176, 6, 2026-10-21 12:00:00, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?,?))
+==> Parameters: 1(Long), 4(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 1, ¹·¹·, ?, ÖÒ³Ï¿É°®µÄ¹·¹·£¬µÈ´ýÒ»¸öÎÂÅ¯µÄ¼Ò, 1, 2026-11-19 13:51:39, 0
+<==        Row: 4, ÆäËû, ?, ÆäËû¿É°®µÄÐ¡¶¯Îï£¬Í¬ÑùÖµµÃ±»°®, 4, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?,?,?))
+==> Parameters: 3(Long), 2(Long), 6(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 6, sunqi, 123456, ËïÆß, /uploads/avatar/sunqi.png, 13800000006, ÄÐ, ³É¶¼, ÕýÔÚÎªÁ÷ÀËÃ¨Ñ°ÕÒÎÂÅ¯µÄ¼Ò, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 1, admin, 123456, ÏµÍ³¹ÜÀíÔ±, /uploads/avatar/admin.png, 13800000001, ÄÐ, ±±¾©, Æ½Ì¨¹ÜÀíÔ±£¬¸ºÔðÄÚÈÝÉóºËÓëÐÅÏ¢Î¬»¤, admin, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 1, admin, 123456, ÏµÍ³¹ÜÀíÔ±, /uploads/avatar/admin.png, 13800000001, ÄÐ, ±±¾©, Æ½Ì¨¹ÜÀíÔ±£¬¸ºÔðÄÚÈÝÉóºËÓëÐÅÏ¢Î¬»¤, admin, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT(*) AS total FROM adopt_apply WHERE deleted = 0 AND (status = ?)
+==> Parameters: 0(Integer)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 0(Integer), 5(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 9, 3, 2, ?????????, ???????, 13800000001, ????, 0, null, 2026-11-19 14:25:29, 2026-11-19 14:25:29, 0
+<==        Row: 5, 6, 6, ¸Õ±ÏÒµ¹¤×÷ÎÈ¶¨£¬ÏëÑøÒ»Ö»éÙÃ¨Åã°é¼Ó°àµÄ×Ô¼º¡£, ³É¶¼ÊÐÎäºîÇøÌì¸®´óµÀ1ºÅ, 13800000006, ÎÞ¾­Ñé£¬Ô¸ÒâÑ§Ï°, 0, null, 2026-11-16 20:15:00, 2026-11-19 13:51:39, 0
+<==        Row: 3, 3, 5, ÓÐ¶ÀÁ¢×¡·¿£¬ÊÒÄÚÃæ»ý120Æ½£¬ÊÊºÏÑø´óÐÍÈ®¡£, ¹ãÖÝÊÐÌìºÓÇøÌåÓýÎ÷Â·20ºÅ, 13800000005, Ñø¹ý½ðÃ«ÎåÄê, 0, null, 2026-11-15 14:10:00, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 AND (id IN (?,?))
+==> Parameters: 3(Long), 6(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 3, ¿É¿É, 1, 5¸öÔÂ, µÜµÜ, ¹ãÖÝ, 0.00, ½¡¿µ£¬Ó×È®´ýÇý³æ, Ð¡¿Â»ùÒ»Ö»£¬Æ¨¹É´óÁ³¿É°®£¬»îÆÃºÃ¶¯£¬Ï²»¶ºÍÈËÍæÇò£¬×î°®ºúÂÜ²·¡£, /uploads/pet/keke.jpg, 1, 0, 0, 1, 276, 4, 2026-10-05 09:30:00, 2026-11-19 13:51:39, 0
+<==        Row: 6, ÍÅ×Ó, 2, 3¸öÔÂ, ÃÃÃÃ, º¼ÖÝ, 0.00, ½¡¿µ£¬Ó×Ã¨´ý½ÓÖÖ, éÙÉ«Ð¡ÍÅ×Ó£¬Ô²¹ö¹öµÄÌØ±ðÄÜ³Ô£¬¼ûÈË¾Íß÷ß÷½Ð£¬Õ³ÈËµÃºÜ¡£, /uploads/pet/tuanzi.jpg, 1, 0, 0, 1, 389, 5, 2026-10-11 08:50:00, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?,?,?))
+==> Parameters: 2(Long), 6(Long), 5(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 5, zhaoliu, 123456, ÕÔÁù, /uploads/avatar/zhaoliu.png, 13800000005, Å®, º¼ÖÝ, ÉÏ°à×å£¬Ï²»¶Ð¡¶¯Îï, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 6, sunqi, 123456, ËïÆß, /uploads/avatar/sunqi.png, 13800000006, ÄÐ, ³É¶¼, ÕýÔÚÎªÁ÷ÀËÃ¨Ñ°ÕÒÎÂÅ¯µÄ¼Ò, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT COUNT(*) AS total FROM pet WHERE deleted = 0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 13
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 3(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 13, ????, 1, 6??, ??, ???, 0.00, ??, ?????????, /uploads/pet/keke.jpg, 1, 0, 1, 1, 3, 3, 2026-11-19 14:25:44, 2026-11-19 14:26:02, 0
+<==        Row: 12, ¶¹¶¹, 4, 1Ëê, µÜµÜ, ³¤É³, 0.00, ½¡¿µ£¬ÒÑÇý³æ, Ò»Ö»º©º©µÄÐ¡²ÖÊó£¬ÅÖºõºõµÄÏ²»¶¶ÚÊ³£¬ÉúÃüÁ¦ºÜÍçÇ¿£¬ºÃÑø»î¡£, /uploads/pet/doudou.jpg, 1, 1, 0, 2, 89, 2, 2026-10-23 17:35:00, 2026-11-19 14:25:14, 0
+<==        Row: 11, ßäßä, 4, 2Ëê, ÃÃÃÃ, Îäºº, 100.00, ½¡¿µ£¬ÒÑ¾øÓý, Ð¡ÇøÀï¼ñµ½µÄÐ¡»¨ßä£¬µ¨´ó°üÌì£¬Ò»µã²»ÅÂÈË£¬ÈÏÖ÷ºóÌØ±ðð¤ÈË¡£, /uploads/pet/mimi.jpg, 1, 1, 1, 1, 176, 6, 2026-10-21 12:00:00, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?,?))
+==> Parameters: 1(Long), 4(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 1, ¹·¹·, ?, ÖÒ³Ï¿É°®µÄ¹·¹·£¬µÈ´ýÒ»¸öÎÂÅ¯µÄ¼Ò, 1, 2026-11-19 13:51:39, 0
+<==        Row: 4, ÆäËû, ?, ÆäËû¿É°®µÄÐ¡¶¯Îï£¬Í¬ÑùÖµµÃ±»°®, 4, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?,?,?))
+==> Parameters: 3(Long), 2(Long), 6(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 6, sunqi, 123456, ËïÆß, /uploads/avatar/sunqi.png, 13800000006, ÄÐ, ³É¶¼, ÕýÔÚÎªÁ÷ÀËÃ¨Ñ°ÕÒÎÂÅ¯µÄ¼Ò, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 1, admin, 123456, ÏµÍ³¹ÜÀíÔ±, /uploads/avatar/admin.png, 13800000001, ÄÐ, ±±¾©, Æ½Ì¨¹ÜÀíÔ±£¬¸ºÔðÄÚÈÝÉóºËÓëÐÅÏ¢Î¬»¤, admin, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT(*) AS total FROM adopt_apply WHERE deleted = 0 AND (status = ?)
+==> Parameters: 0(Integer)
+<==    Columns: total
+<==        Row: 3
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 0(Integer), 10(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 9, 3, 2, ?????????, ???????, 13800000001, ????, 0, null, 2026-11-19 14:25:29, 2026-11-19 14:25:29, 0
+<==        Row: 5, 6, 6, ¸Õ±ÏÒµ¹¤×÷ÎÈ¶¨£¬ÏëÑøÒ»Ö»éÙÃ¨Åã°é¼Ó°àµÄ×Ô¼º¡£, ³É¶¼ÊÐÎäºîÇøÌì¸®´óµÀ1ºÅ, 13800000006, ÎÞ¾­Ñé£¬Ô¸ÒâÑ§Ï°, 0, null, 2026-11-16 20:15:00, 2026-11-19 13:51:39, 0
+<==        Row: 3, 3, 5, ÓÐ¶ÀÁ¢×¡·¿£¬ÊÒÄÚÃæ»ý120Æ½£¬ÊÊºÏÑø´óÐÍÈ®¡£, ¹ãÖÝÊÐÌìºÓÇøÌåÓýÎ÷Â·20ºÅ, 13800000005, Ñø¹ý½ðÃ«ÎåÄê, 0, null, 2026-11-15 14:10:00, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 AND (id IN (?,?))
+==> Parameters: 3(Long), 6(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 3, ¿É¿É, 1, 5¸öÔÂ, µÜµÜ, ¹ãÖÝ, 0.00, ½¡¿µ£¬Ó×È®´ýÇý³æ, Ð¡¿Â»ùÒ»Ö»£¬Æ¨¹É´óÁ³¿É°®£¬»îÆÃºÃ¶¯£¬Ï²»¶ºÍÈËÍæÇò£¬×î°®ºúÂÜ²·¡£, /uploads/pet/keke.jpg, 1, 0, 0, 1, 276, 4, 2026-10-05 09:30:00, 2026-11-19 13:51:39, 0
+<==        Row: 6, ÍÅ×Ó, 2, 3¸öÔÂ, ÃÃÃÃ, º¼ÖÝ, 0.00, ½¡¿µ£¬Ó×Ã¨´ý½ÓÖÖ, éÙÉ«Ð¡ÍÅ×Ó£¬Ô²¹ö¹öµÄÌØ±ðÄÜ³Ô£¬¼ûÈË¾Íß÷ß÷½Ð£¬Õ³ÈËµÃºÜ¡£, /uploads/pet/tuanzi.jpg, 1, 0, 0, 1, 389, 5, 2026-10-11 08:50:00, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?,?,?))
+==> Parameters: 2(Long), 6(Long), 5(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 2, zhangsan, 123456, ÕÅÈý, /uploads/avatar/zhangsan.png, 13800000002, ÄÐ, ÉÏº£, Ï²»¶Ñø¹·£¬ÒÑ¾­ÓÐÁ½Ö»Ã¨ßäÁË, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 5, zhaoliu, 123456, ÕÔÁù, /uploads/avatar/zhaoliu.png, 13800000005, Å®, º¼ÖÝ, ÉÏ°à×å£¬Ï²»¶Ð¡¶¯Îï, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 6, sunqi, 123456, ËïÆß, /uploads/avatar/sunqi.png, 13800000006, ÄÐ, ³É¶¼, ÕýÔÚÎªÁ÷ÀËÃ¨Ñ°ÕÒÎÂÅ¯µÄ¼Ò, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 3
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE id=? AND deleted=0
+==> Parameters: 9(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 9, 3, 2, ?????????, ???????, 13800000001, ????, 0, null, 2026-11-19 14:25:29, 2026-11-19 14:25:29, 0
+<==      Total: 1
+==>  Preparing: UPDATE adopt_apply SET pet_id=?, user_id=?, reason=?, address=?, phone=?, experience=?, status=?, audit_remark=?, create_time=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: 3(Long), 2(Long), ?????????(String), ???????(String), 13800000001(String), ????(String), 1(Integer), test123(String), 2026-11-19T14:25:29(LocalDateTime), 2026-11-19T14:31:15.235336(LocalDateTime), 9(Long)
+<==    Updates: 1
+==>  Preparing: UPDATE pet SET status=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: 2(Integer), 2026-11-19T14:31:15.238876800(LocalDateTime), 3(Long)
+<==    Updates: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 1, admin, 123456, ÏµÍ³¹ÜÀíÔ±, /uploads/avatar/admin.png, 13800000001, ÄÐ, ±±¾©, Æ½Ì¨¹ÜÀíÔ±£¬¸ºÔðÄÚÈÝÉóºËÓëÐÅÏ¢Î¬»¤, admin, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT COUNT(*) AS total FROM adopt_apply WHERE deleted = 0 AND (status = ?)
+==> Parameters: 0(Integer)
+<==    Columns: total
+<==        Row: 2
+<==      Total: 1
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 0(Integer), 10(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 5, 6, 6, ¸Õ±ÏÒµ¹¤×÷ÎÈ¶¨£¬ÏëÑøÒ»Ö»éÙÃ¨Åã°é¼Ó°àµÄ×Ô¼º¡£, ³É¶¼ÊÐÎäºîÇøÌì¸®´óµÀ1ºÅ, 13800000006, ÎÞ¾­Ñé£¬Ô¸ÒâÑ§Ï°, 0, null, 2026-11-16 20:15:00, 2026-11-19 13:51:39, 0
+<==        Row: 3, 3, 5, ÓÐ¶ÀÁ¢×¡·¿£¬ÊÒÄÚÃæ»ý120Æ½£¬ÊÊºÏÑø´óÐÍÈ®¡£, ¹ãÖÝÊÐÌìºÓÇøÌåÓýÎ÷Â·20ºÅ, 13800000005, Ñø¹ý½ðÃ«ÎåÄê, 0, null, 2026-11-15 14:10:00, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 AND (id IN (?,?))
+==> Parameters: 6(Long), 3(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 3, ¿É¿É, 1, 5¸öÔÂ, µÜµÜ, ¹ãÖÝ, 0.00, ½¡¿µ£¬Ó×È®´ýÇý³æ, Ð¡¿Â»ùÒ»Ö»£¬Æ¨¹É´óÁ³¿É°®£¬»îÆÃºÃ¶¯£¬Ï²»¶ºÍÈËÍæÇò£¬×î°®ºúÂÜ²·¡£, /uploads/pet/keke.jpg, 1, 0, 0, 2, 276, 4, 2026-10-05 09:30:00, 2026-11-19 14:31:15, 0
+<==        Row: 6, ÍÅ×Ó, 2, 3¸öÔÂ, ÃÃÃÃ, º¼ÖÝ, 0.00, ½¡¿µ£¬Ó×Ã¨´ý½ÓÖÖ, éÙÉ«Ð¡ÍÅ×Ó£¬Ô²¹ö¹öµÄÌØ±ðÄÜ³Ô£¬¼ûÈË¾Íß÷ß÷½Ð£¬Õ³ÈËµÃºÜ¡£, /uploads/pet/tuanzi.jpg, 1, 0, 0, 1, 389, 5, 2026-10-11 08:50:00, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?,?))
+==> Parameters: 6(Long), 5(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 5, zhaoliu, 123456, ÕÔÁù, /uploads/avatar/zhaoliu.png, 13800000005, Å®, º¼ÖÝ, ÉÏ°à×å£¬Ï²»¶Ð¡¶¯Îï, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==        Row: 6, sunqi, 123456, ËïÆß, /uploads/avatar/sunqi.png, 13800000006, ÄÐ, ³É¶¼, ÕýÔÚÎªÁ÷ÀËÃ¨Ñ°ÕÒÎÂÅ¯µÄ¼Ò, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 2
+==>  Preparing: SELECT id,pet_id,user_id,reason,address,phone,experience,status,audit_remark,create_time,update_time,deleted FROM adopt_apply WHERE id=? AND deleted=0
+==> Parameters: 5(Long)
+<==    Columns: id, pet_id, user_id, reason, address, phone, experience, status, audit_remark, create_time, update_time, deleted
+<==        Row: 5, 6, 6, ¸Õ±ÏÒµ¹¤×÷ÎÈ¶¨£¬ÏëÑøÒ»Ö»éÙÃ¨Åã°é¼Ó°àµÄ×Ô¼º¡£, ³É¶¼ÊÐÎäºîÇøÌì¸®´óµÀ1ºÅ, 13800000006, ÎÞ¾­Ñé£¬Ô¸ÒâÑ§Ï°, 0, null, 2026-11-16 20:15:00, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: UPDATE adopt_apply SET pet_id=?, user_id=?, reason=?, address=?, phone=?, experience=?, status=?, audit_remark=?, create_time=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: 6(Long), 6(Long), ¸Õ±ÏÒµ¹¤×÷ÎÈ¶¨£¬ÏëÑøÒ»Ö»éÙÃ¨Åã°é¼Ó°àµÄ×Ô¼º¡£(String), ³É¶¼ÊÐÎäºîÇøÌì¸®´óµÀ1ºÅ(String), 13800000006(String), ÎÞ¾­Ñé£¬Ô¸ÒâÑ§Ï°(String), 1(Integer), ×ÊÁÏÆëÈ«£¬·ûºÏÁìÑøÌõ¼þ(String), 2026-11-16T20:15(LocalDateTime), 2026-11-19T14:31:33.083132700(LocalDateTime), 5(Long)
+<==    Updates: 1
+==>  Preparing: UPDATE pet SET status=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: 2(Integer), 2026-11-19T14:31:33.087108200(LocalDateTime), 6(Long)
+<==    Updates: 1
+==>  Preparing: SELECT COUNT(*) AS total FROM pet WHERE deleted = 0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 13
+<==      Total: 1
+==>  Preparing: SELECT id,name,category_id,age,gender,city,price,health,description,cover_img,vaccine,sterilized,deworm,status,view_count,user_id,create_time,update_time,deleted FROM pet WHERE deleted=0 ORDER BY create_time DESC,id DESC LIMIT ?
+==> Parameters: 1(Long)
+<==    Columns: id, name, category_id, age, gender, city, price, health, description, cover_img, vaccine, sterilized, deworm, status, view_count, user_id, create_time, update_time, deleted
+<==        Row: 13, ????, 1, 6??, ??, ???, 0.00, ??, ?????????, /uploads/pet/keke.jpg, 1, 0, 1, 1, 3, 3, 2026-11-19 14:25:44, 2026-11-19 14:26:02, 0
+<==      Total: 1
+==>  Preparing: SELECT id,name,icon,description,sort,create_time,deleted FROM pet_category WHERE deleted=0 AND (id IN (?))
+==> Parameters: 1(Long)
+<==    Columns: id, name, icon, description, sort, create_time, deleted
+<==        Row: 1, ¹·¹·, ?, ÖÒ³Ï¿É°®µÄ¹·¹·£¬µÈ´ýÒ»¸öÎÂÅ¯µÄ¼Ò, 1, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (id IN (?))
+==> Parameters: 3(Long)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 3, lisi, 123456, ÀîËÄ, /uploads/avatar/lisi.png, 13800000003, Å®, ¹ãÖÝ, °®Ã¨ÈËÊ¿£¬ÓÐ¹ýÁ½ÄêÑø³è¾­Ñé, user, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+==>  Preparing: SELECT id,username,password,nickname,avatar,phone,gender,city,intro,role,status,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, avatar, phone, gender, city, intro, role, status, create_time, update_time, deleted
+<==        Row: 1, admin, 123456, ÏµÍ³¹ÜÀíÔ±, /uploads/avatar/admin.png, 13800000001, ÄÐ, ±±¾©, Æ½Ì¨¹ÜÀíÔ±£¬¸ºÔðÄÚÈÝÉóºËÓëÐÅÏ¢Î¬»¤, admin, 1, 2026-11-19 13:51:39, 2026-11-19 13:51:39, 0
+<==      Total: 1
+2026-11-19T14:34:15.784+08:00 ERROR 290368 --- [pet-adoption-server] [nio-8080-exec-9] c.j.common.GlobalExceptionHandler        : ç³»ç»Ÿå¼‚å¸¸
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "abc"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:295) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:134) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:378) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:101) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at com.java1234.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:76) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:91) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:76) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "abc"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:709) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1157) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:204) ~[spring-core-7.0.10.jar:7.0.10]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:438) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:411) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:158) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:75) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:51) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:846) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:287) ~[spring-web-7.0.10.jar:7.0.10]
+	... 94 common frames omitted
+

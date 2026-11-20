@@ -1,0 +1,94 @@
+<!-- 登录 / 注册页 -->
+<view class="login-page">
+  <!-- 顶部渐变插画 -->
+  <view class="login-header">
+    <view class="login-logo">🐾</view>
+    <view class="login-title">Java1234 宠物领养</view>
+    <view class="login-sub">领养代替购买 · 让每个小生命都有归宿</view>
+  </view>
+
+  <!-- 登录表单 -->
+  <view class="card form-card" wx:if="{{mode === 'login'}}">
+    <view class="form-title">账号登录</view>
+    <view class="input-group">
+      <text class="input-icon">👤</text>
+      <input
+        class="input-field"
+        type="text"
+        placeholder="请输入登录账号"
+        value="{{form.username}}"
+        data-field="username"
+        bindinput="onLoginInput"
+      />
+    </view>
+    <view class="input-group">
+      <text class="input-icon">🔒</text>
+      <input
+        class="input-field"
+        password
+        placeholder="请输入登录密码"
+        value="{{form.password}}"
+        data-field="password"
+        bindinput="onLoginInput"
+      />
+    </view>
+    <view class="submit-btn" bindtap="submitLogin">{{submitting ? '登录中...' : '登 录'}}</view>
+    <view class="wx-login" bindtap="wxLogin">
+      <text class="wx-icon">💬</text>
+      <text>微信一键登录（演示账号 zhangsan）</text>
+    </view>
+    <view class="switch-tip" bindtap="toggleMode">还没有账号？<text class="link">立即注册</text></view>
+    <view class="demo-tip">测试账号：zhangsan / 123456</view>
+  </view>
+
+  <!-- 注册表单 -->
+  <view class="card form-card" wx:if="{{mode === 'register'}}">
+    <view class="form-title">注册新账号</view>
+    <view class="input-group">
+      <text class="input-icon">👤</text>
+      <input
+        class="input-field"
+        type="text"
+        placeholder="请输入登录账号"
+        value="{{registerForm.username}}"
+        data-field="username"
+        bindinput="onRegisterInput"
+      />
+    </view>
+    <view class="input-group">
+      <text class="input-icon">🔒</text>
+      <input
+        class="input-field"
+        password
+        placeholder="请输入登录密码"
+        value="{{registerForm.password}}"
+        data-field="password"
+        bindinput="onRegisterInput"
+      />
+    </view>
+    <view class="input-group">
+      <text class="input-icon">😊</text>
+      <input
+        class="input-field"
+        type="text"
+        placeholder="请输入用户昵称（选填）"
+        value="{{registerForm.nickname}}"
+        data-field="nickname"
+        bindinput="onRegisterInput"
+      />
+    </view>
+    <view class="input-group">
+      <text class="input-icon">📱</text>
+      <input
+        class="input-field"
+        type="number"
+        placeholder="请输入联系电话（选填）"
+        value="{{registerForm.phone}}"
+        data-field="phone"
+        bindinput="onRegisterInput"
+      />
+    </view>
+    <view class="submit-btn" bindtap="submitRegister">{{submitting ? '注册中...' : '注 册'}}</view>
+    <view class="switch-tip" bindtap="toggleMode">已有账号？<text class="link">返回登录</text></view>
+  </view>
+</view>

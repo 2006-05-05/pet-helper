@@ -1,0 +1,19 @@
+{
+  "name": "java1234-pet-adoption-weixin",
+  "version": "1.0.0",
+  "description": "Java1234 微信小程序宠物领养系统 - 小程序端",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [
+    "weixin",
+    "miniprogram",
+    "pet-adoption"
+  ],
+  "author": "Java1234",
+  "license": "MIT",
+  "devDependencies": {
+    "miniprogram-api-typings": "^2.8.3-1",
+    "typescript": "^5.6.3"
+  }
+}

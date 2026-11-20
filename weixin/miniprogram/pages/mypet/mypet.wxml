@@ -1,0 +1,37 @@
+<!-- 我的发布页 -->
+<view class="mypet-page">
+  <view class="pet-list">
+    <view
+      class="pet-card"
+      wx:for="{{pets}}"
+      wx:key="id"
+      bindtap="goDetail"
+      data-id="{{item.id}}"
+    >
+      <image class="pet-cover" src="{{item.coverUrl}}" mode="aspectFill" lazy-load />
+      <view class="pet-body">
+        <view class="pet-top">
+          <text class="pet-name ellipsis">{{item.name}}</text>
+          <text class="pet-status {{item.status === 1 ? 'wait' : (item.status === 2 ? 'done' : 'off')}}">
+            {{item.status === 1 ? '待领养' : (item.status === 2 ? '已领养' : '已下架')}}
+          </text>
+        </view>
+        <view class="pet-meta ellipsis">
+          {{item.age}} · {{item.city}} · {{item.categoryName}}
+        </view>
+        <view class="pet-desc ellipsis-2">{{item.description}}</view>
+        <view class="pet-foot">
+          <text class="pet-views">👁 {{item.viewCount}} 浏览</text>
+          <text class="pet-time">{{item.createTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-tip" wx:if="{{!pets.length && !loading}}">
+    <text class="empty-icon">🐾</text>
+    <text>你还没有发布过领养信息，快去发布一条吧</text>
+    <view class="empty-btn" bindtap="goPublish">去发布</view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+
+> client@0.0.0 dev
+> vite
+
+
+  VITE v8.3.8  ready in 265 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.56.1:5173/    以太网 3
+  ➜  Network: http://10.105.174.220:5173/  WLAN
+14:21:44 [vite] (client) hmr update /src/views/login.vue, /src/views/profile.vue, /src/views/home.vue, /src/views/pet.vue, /src/views/category.vue, /src/views/notice.vue, /src/views/apply.vue, /src/views/user.vue, /src/views/comment.vue
+14:23:34 [vite] (client) hmr update /src/views/apply.vue
+15:23:55 [vite] (client) hmr update /src/views/login.vue, /src/views/profile.vue, /src/views/home.vue, /src/views/pet.vue, /src/views/category.vue, /src/views/notice.vue, /src/views/apply.vue, /src/views/user.vue, /src/views/comment.vue
+16:22:22 [vite] vite.config.js changed, restarting server...
+16:22:23 [vite] server restarted.

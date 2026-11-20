@@ -1,0 +1,42 @@
+<!-- 领养公告页 -->
+<view class="notice-page">
+  <view class="card notice-item" wx:for="{{notices}}" wx:key="id" bindtap="openDetail" data-id="{{item.id}}">
+    <image class="notice-cover" wx:if="{{item.coverUrl}}" src="{{item.coverUrl}}" mode="aspectFill" />
+    <view class="notice-body">
+      <view class="notice-head">
+        <text class="notice-type {{item.type === '活动' ? 'act' : (item.type === '攻略' ? 'guide' : 'info')}}">
+          {{item.type}}
+        </text>
+        <text class="notice-date">{{item.createTime}}</text>
+      </view>
+      <view class="notice-title">{{item.title}}</view>
+      <view class="notice-content ellipsis-2">{{item.content}}</view>
+      <view class="notice-foot">
+        <text class="notice-view">👁 {{item.viewCount}} 阅读</text>
+        <text class="notice-more">查看详情 ›</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-tip" wx:if="{{!notices.length && !loading}}">
+    <text class="empty-icon">📰</text>
+    <text>暂无公告信息</text>
+  </view>
+
+  <!-- 公告详情弹层 -->
+  <view class="mask" wx:if="{{showDetail}}" bindtap="closeDetail">
+    <view class="detail-panel" catchtap="noop">
+      <view class="panel-title">{{detail.title}}</view>
+      <view class="panel-meta">
+        <text class="notice-type">{{detail.type}}</text>
+        <text class="panel-date">{{detail.createTime}}</text>
+        <text class="panel-date">{{detail.viewCount}} 次阅读</text>
+      </view>
+      <image class="panel-cover" wx:if="{{detail.coverUrl}}" src="{{detail.coverUrl}}" mode="widthFix" />
+      <scroll-view class="panel-content" scroll-y>
+        <text>{{detail.content}}</text>
+      </scroll-view>
+      <view class="panel-btn" bindtap="closeDetail">我知道了</view>
+    </view>
+  </view>
+</view>

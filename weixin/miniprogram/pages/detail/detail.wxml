@@ -1,0 +1,157 @@
+<!-- 宠物详情页 -->
+<view class="detail-page" wx:if="{{pet}}">
+  <!-- 图片轮播 -->
+  <swiper class="cover-swiper" indicator-dots circular indicator-active-color="#FFFFFF" bindchange="onSwiperChange">
+    <swiper-item wx:for="{{images}}" wx:key="*this">
+      <image class="cover-img" src="{{item}}" mode="aspectFill" data-src="{{item}}" bindtap="previewImage" />
+    </swiper-item>
+  </swiper>
+
+  <!-- 基础信息卡片 -->
+  <view class="card info-card">
+    <view class="info-top">
+      <text class="pet-name">{{pet.name}}</text>
+      <text class="pet-gender {{pet.gender === '妹妹' ? 'girl' : 'boy'}}">{{pet.gender}}</text>
+      <text class="pet-status {{pet.status === 1 ? 'wait' : 'done'}}">
+        {{pet.status === 1 ? '待领养' : (pet.status === 2 ? '已领养' : '已下架')}}
+      </text>
+    </view>
+    <view class="info-tags">
+      <text class="info-tag">{{pet.age}}</text>
+      <text class="info-tag">{{pet.categoryName}}</text>
+      <text class="info-tag">{{pet.city}}</text>
+      <text class="info-tag">👁 {{pet.viewCount}} 浏览</text>
+    </view>
+    <view class="price-row">
+      <text class="price {{pet.price > 0 ? 'has-price' : 'free'}}">
+        {{pet.price > 0 ? '领养费用 ¥' + pet.price : '免费领养'}}
+      </text>
+      <text class="publisher">发布人：{{pet.userNickname || '平台用户'}}</text>
+    </view>
+  </view>
+
+  <!-- 健康档案 -->
+  <view class="card block-card">
+    <view class="block-title">🩺 健康档案</view>
+    <view class="health-row">
+      <view class="health-item {{pet.vaccine === 1 ? 'done' : ''}}">
+        <text class="health-icon">💉</text>
+        <text class="health-text">疫苗{{pet.vaccine === 1 ? '已接种' : '未接种'}}</text>
+      </view>
+      <view class="health-item {{pet.sterilized === 1 ? 'done' : ''}}">
+        <text class="health-icon">✂️</text>
+        <text class="health-text">绝育{{pet.sterilized === 1 ? '已完成' : '未完成'}}</text>
+      </view>
+      <view class="health-item {{pet.deworm === 1 ? 'done' : ''}}">
+        <text class="health-icon">🧴</text>
+        <text class="health-text">驱虫{{pet.deworm === 1 ? '已完成' : '未完成'}}</text>
+      </view>
+    </view>
+    <view class="health-desc">{{pet.health || '暂无健康状况描述'}}</view>
+  </view>
+
+  <!-- 详细介绍 -->
+  <view class="card block-card">
+    <view class="block-title">📖 详细介绍</view>
+    <view class="detail-desc">{{pet.description || '暂无详细介绍'}}</view>
+  </view>
+
+  <!-- 留言区 -->
+  <view class="card block-card">
+    <view class="block-title">💬 用户留言（{{comments.length}}）</view>
+    <view class="comment-list">
+      <view class="comment-item" wx:for="{{comments}}" wx:key="id">
+        <view class="comment-avatar">{{item.nickname ? item.nickname.charAt(0) : '匿'}}</view>
+        <view class="comment-body">
+          <view class="comment-head">
+            <text class="comment-name">{{item.nickname || '匿名用户'}}</text>
+            <text class="comment-time">{{item.createTime}}</text>
+          </view>
+          <view class="comment-content">{{item.content}}</view>
+        </view>
+      </view>
+      <view class="empty-tip" wx:if="{{!comments.length}}">
+        <text class="empty-icon">💭</text>
+        <text>还没有留言，快来和它打个招呼吧</text>
+      </view>
+    </view>
+
+    <!-- 留言输入框 -->
+    <view class="comment-input">
+      <input
+        class="comment-field"
+        type="text"
+        placeholder="说点什么吧..."
+        value="{{commentText}}"
+        bindinput="onCommentInput"
+      />
+      <view class="comment-send" bindtap="submitComment">发送</view>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="bottom-bar">
+    <view class="bar-icon {{favorited ? 'active' : ''}}" bindtap="toggleFavorite">
+      <text class="bar-icon-text">{{favorited ? '❤️' : '🤍'}}</text>
+      <text class="bar-label">{{favorited ? '已收藏' : '收藏'}}</text>
+    </view>
+    <view class="bar-icon" bindtap="goMy">
+      <text class="bar-icon-text">📋</text>
+      <text class="bar-label">我的申请</text>
+    </view>
+    <view class="apply-btn" bindtap="openApply">立即申请领养</view>
+  </view>
+</view>
+
+<!-- 领养申请弹窗 -->
+<view class="mask" wx:if="{{applyVisible}}" bindtap="closeApply">
+  <view class="apply-panel" catchtap="noop">
+    <view class="panel-title">提交领养申请</view>
+    <view class="panel-tip">请如实填写以下信息，审核通过后工作人员会与你联系</view>
+    <view class="form-item">
+      <text class="form-label">领养理由<text class="required">*</text></text>
+      <textarea
+        class="form-textarea"
+        placeholder="请说明你为什么想领养它"
+        value="{{applyForm.reason}}"
+        data-field="reason"
+        bindinput="onApplyInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">居住地址<text class="required">*</text></text>
+      <input
+        class="form-input"
+        placeholder="请输入详细居住地址"
+        value="{{applyForm.address}}"
+        data-field="address"
+        bindinput="onApplyInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">联系电话<text class="required">*</text></text>
+      <input
+        class="form-input"
+        type="number"
+        placeholder="请输入联系电话"
+        value="{{applyForm.phone}}"
+        data-field="phone"
+        bindinput="onApplyInput"
+      />
+    </view>
+    <view class="form-item">
+      <text class="form-label">养宠经验</text>
+      <textarea
+        class="form-textarea"
+        placeholder="简单介绍一下你的养宠经历（选填）"
+        value="{{applyForm.experience}}"
+        data-field="experience"
+        bindinput="onApplyInput"
+      />
+    </view>
+    <view class="panel-actions">
+      <view class="panel-btn cancel" bindtap="closeApply">取消</view>
+      <view class="panel-btn confirm" bindtap="submitApply">提交申请</view>
+    </view>
+  </view>
+</view>

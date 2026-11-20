@@ -1,0 +1,126 @@
+<!-- 首页 -->
+<view class="index-page">
+  <!-- 顶部渐变搜索区 -->
+  <view class="header">
+    <view class="header-title">🐾 找到属于你的它</view>
+    <view class="search-box">
+      <text class="search-icon">🔍</text>
+      <input
+        class="search-input"
+        type="text"
+        placeholder="搜索宠物昵称或特征"
+        value="{{keyword}}"
+        confirm-type="search"
+        bindinput="onSearchInput"
+        bindconfirm="onSearchConfirm"
+      />
+      <text class="search-btn" bindtap="onSearchConfirm">搜索</text>
+    </view>
+    <!-- 快捷操作 -->
+    <view class="quick-actions">
+      <view class="quick-item" bindtap="goCategory">
+        <text class="quick-icon">🎯</text>
+        <text class="quick-text">分类找宠</text>
+      </view>
+      <view class="quick-item" bindtap="goPublish">
+        <text class="quick-icon">✍️</text>
+        <text class="quick-text">发布领养</text>
+      </view>
+      <view class="quick-item" bindtap="goCategory">
+        <text class="quick-icon">🏙️</text>
+        <text class="quick-text">同城寻找</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 平台数据统计（数据来源于后端 /api/stats/overview，与管理后台同源） -->
+  <view class="stat-panel">
+    <view class="stat-cell">
+      <view class="stat-num">{{stats.petTotal}}</view>
+      <view class="stat-text">平台宠物</view>
+    </view>
+    <view class="stat-cell">
+      <view class="stat-num wait">{{stats.petWait}}</view>
+      <view class="stat-text">待领养</view>
+    </view>
+    <view class="stat-cell">
+      <view class="stat-num done">{{stats.petAdopted}}</view>
+      <view class="stat-text">已领养</view>
+    </view>
+    <view class="stat-cell">
+      <view class="stat-num apply">{{stats.applyTotal}}</view>
+      <view class="stat-text">领养申请</view>
+    </view>
+  </view>
+
+  <!-- 公告轮播 -->
+  <view class="notice-wrap" wx:if="{{notices.length}}">
+    <swiper class="notice-swiper" indicator-dots autoplay circular interval="4000" indicator-active-color="#FFFFFF">
+      <swiper-item wx:for="{{notices}}" wx:key="id" bindtap="goNotice" data-id="{{item.id}}">
+        <view class="notice-item">
+          <text class="notice-badge">{{item.type}}</text>
+          <text class="notice-title ellipsis">{{item.title}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 分类快捷入口 -->
+  <view class="category-bar">
+    <view
+      class="category-item {{currentCategory === 0 ? 'active' : ''}}"
+      wx:for="{{categories}}"
+      wx:key="id"
+      bindtap="onCategoryTap"
+      data-id="{{item.id}}"
+    >
+      <text class="category-icon">{{item.icon}}</text>
+      <text class="category-name">{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 宠物列表 -->
+  <view class="pet-list">
+    <view
+      class="pet-card"
+      wx:for="{{pets}}"
+      wx:key="id"
+      bindtap="goDetail"
+      data-id="{{item.id}}"
+    >
+      <!-- 封面图使用 coverUrl（后端已拼接完整的服务器地址），不能直接用 coverImg 相对路径 -->
+      <image class="pet-cover" src="{{item.coverUrl}}" mode="aspectFill" lazy-load />
+      <view class="pet-info">
+        <view class="pet-top">
+          <text class="pet-name">{{item.name}}</text>
+          <text class="pet-tag {{item.gender === '妹妹' ? 'girl' : 'boy'}}">{{item.gender}}</text>
+        </view>
+        <view class="pet-meta">
+          <text class="meta-text">{{item.age}}</text>
+          <text class="meta-text">·</text>
+          <text class="meta-text">{{item.city}}</text>
+          <text class="meta-text">·</text>
+          <text class="meta-text">{{item.categoryName}}</text>
+        </view>
+        <view class="pet-desc ellipsis-2">{{item.description}}</view>
+        <view class="pet-bottom">
+          <text class="pet-price {{item.price > 0 ? 'has-price' : 'free'}}">
+            {{item.price > 0 ? '¥' + item.price : '免费领养'}}
+          </text>
+          <view class="pet-view">👁 {{item.viewCount}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 空状态 -->
+    <view class="empty-tip" wx:if="{{!pets.length && !loading}}">
+      <text class="empty-icon">🐾</text>
+      <text>暂时没有找到相关宠物，换个关键词试试吧</text>
+    </view>
+
+    <!-- 加载更多 -->
+    <view class="load-more" wx:if="{{pets.length}}">
+      {{loading ? '加载中...' : (noMore ? '已经到底啦 ~' : '上拉加载更多')}}
+    </view>
+  </view>
+</view>

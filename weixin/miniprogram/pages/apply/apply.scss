@@ -1,0 +1,110 @@
+/* 我的申请页样式 */
+.apply-page {
+  min-height: 100vh;
+  padding: 22rpx 24rpx 40rpx;
+}
+
+.apply-item {
+  padding: 24rpx;
+  margin-bottom: 22rpx;
+}
+
+.apply-head {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px dashed #f0f2f7;
+}
+
+.apply-cover {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 20rpx;
+  background: #f2f4f8;
+  flex-shrink: 0;
+}
+
+.apply-info {
+  flex: 1;
+}
+
+.apply-pet {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.apply-time {
+  font-size: 22rpx;
+  color: var(--text-sub);
+  margin-top: 8rpx;
+}
+
+.apply-status {
+  display: inline-block;
+  font-size: 21rpx;
+  padding: 5rpx 18rpx;
+  border-radius: 22rpx;
+  margin-top: 12rpx;
+
+  &.pending {
+    background: rgba(250, 173, 20, 0.14);
+    color: #d48806;
+  }
+
+  &.pass {
+    background: rgba(82, 196, 26, 0.13);
+    color: #52c41a;
+  }
+
+  &.reject {
+    background: rgba(255, 77, 79, 0.12);
+    color: #ff4d4f;
+  }
+
+  &.cancel {
+    background: #f1f3f8;
+    color: var(--text-sub);
+  }
+}
+
+.apply-body {
+  padding: 18rpx 0 6rpx;
+}
+
+.apply-row {
+  display: flex;
+  margin-bottom: 14rpx;
+  font-size: 24rpx;
+  line-height: 1.7;
+}
+
+.row-label {
+  color: var(--text-sub);
+  width: 150rpx;
+  flex-shrink: 0;
+}
+
+.row-value {
+  color: #4c5666;
+  flex: 1;
+}
+
+.apply-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16rpx;
+  border-top: 1px dashed #f0f2f7;
+}
+
+.action-btn {
+  padding: 12rpx 32rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+
+  &.cancel {
+    background: #f2f4f8;
+    color: var(--text-sub);
+  }
+}

@@ -1,0 +1,222 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+14:19:24 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:19:41 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:20:59 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:21:00 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:21:01 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:21:02 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:21:04 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:21:05 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:21:06 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:10 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:11 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:11 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:11 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:13 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:13 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:14 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:16 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:19 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:21 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:22 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:23 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:25 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:26 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:23:27 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:41:03 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:41:05 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:41:07 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:41:35 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:41:37 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:53:26 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:53:30 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:53:32 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+14:53:33 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:04:35 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:04:35 [vite] http proxy error: /api/comment/page?page=1&pageSize=10
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1142:49)
+    at afterConnectMultiple (node:net:1723:7)
+15:04:39 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:04:40 [vite] http proxy error: /api/admin/user/page?page=1&pageSize=10
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1142:49)
+    at afterConnectMultiple (node:net:1723:7)
+15:04:59 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:04:59 [vite] http proxy error: /api/stats/dashboard
+AggregateError [ECONNREFUSED]: 
+    at internalConnectMultiple (node:net:1142:49)
+    at afterConnectMultiple (node:net:1723:7)
+15:04:59 [vite] (client) [console.warn] [Vue warn]: Unhandled error during execution of mounted hook 
+  at <Home onVnodeUnmounted=fn<onVnodeUnmounted> onVnodeMounted=fn<onVnodeSettled> onVnodeUpdated=fn<onVnodeSettled>  ... > 
+  at <BaseTransition mode="out-in" appear=false persisted=false  ... > 
+  at <Transition name="fade" mode="out-in" > 
+  at <RouterView> 
+  at <Index onVnodeUnmounted=fn<onVnodeUnmounted> onVnodeMounted=fn<onVnodeSettled> onVnodeUpdated=fn<onVnodeSettled>  ... > 
+  at <RouterView> 
+  at <App>
+15:04:59 [vite] (client) [Unhandled rejection] AxiosError: Request failed with status code 502
+ > settle node_modules/axios/lib/core/settle.js:19:11
+ > XMLHttpRequest.onloadend node_modules/axios/lib/adapters/xhr.js:153:8
+ > Axios$1.request node_modules/axios/lib/core/Axios.js:80:42
+ > src/views/home.vue:404:15
+    402 |  
+    403 |  onMounted(async () => {
+    404 |    const res = await getDashboard()
+        |                 ^
+    405 |    const data = res.data || {}
+    406 |    overview.value = data.overview || {}
+
+15:10:10 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:10:58 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:11:05 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:11:08 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:11:15 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:11:18 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:11:43 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:11:50 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:12:03 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:12:08 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:12:11 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+15:13:33 [vite] (client) [console.warn] ElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:4649:35)
+    at watch.immediate (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:5829:12)
+    at callWithErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1962:17)
+    at callWithAsyncErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1969:15)
+    at baseWatchOptions.call (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2521:46)
+    at job (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1742:13)
+    at watch$1 (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1765:18)
+    at doWatch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2544:22)
+    at watch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2495:9)
+    at useDeprecated (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:5828:2)
+15:13:33 [vite] (client) [console.warn] ElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:4649:35)
+    at watch.immediate (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:5829:12)
+    at callWithErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1962:17)
+    at callWithAsyncErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1969:15)
+    at baseWatchOptions.call (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2521:46)
+    at job (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1742:13)
+    at watch$1 (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1765:18)
+    at doWatch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2544:22)
+    at watch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2495:9)
+    at useDeprecated (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:5828:2)
+15:13:33 [vite] (client) [console.warn] ElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:4649:35)
+    at watch.immediate (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:5829:12)
+    at callWithErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1962:17)
+    at callWithAsyncErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1969:15)
+    at baseWatchOptions.call (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2521:46)
+    at job (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1742:13)
+    at watch$1 (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:1765:18)
+    at doWatch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2544:22)
+    at watch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-DJIeAjNT.js?v=8fe6f0c1:2495:9)
+    at useDeprecated (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=f3253621:5828:2)
+15:57:45 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+16:09:28 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next
+16:18:20 [vite] (client) [console.warn] [VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.
+├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next("/path")` becomes `return "/path"`.
+╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next

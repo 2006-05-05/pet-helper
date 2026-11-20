@@ -1,0 +1,74 @@
+<!-- 我的页面 -->
+<view class="my-page">
+  <!-- 用户信息头部 -->
+  <view class="my-header">
+    <view class="header-bg"></view>
+    <view class="user-row" wx:if="{{user}}">
+      <view class="user-avatar">{{user.nickname ? user.nickname.charAt(0) : 'U'}}</view>
+      <view class="user-info">
+        <view class="user-name">{{user.nickname || user.username}}</view>
+        <view class="user-account">@{{user.username}} · {{user.city || '未知城市'}}</view>
+      </view>
+      <view class="logout-btn" bindtap="logout">退出</view>
+    </view>
+    <view class="user-row" wx:else>
+      <view class="user-avatar guest">👤</view>
+      <view class="user-info">
+        <view class="user-name">未登录</view>
+        <view class="user-account">登录后享受完整功能</view>
+      </view>
+      <view class="login-btn" bindtap="goLogin">去登录</view>
+    </view>
+  </view>
+
+  <!-- 数据统计 -->
+  <view class="stat-row">
+    <view class="stat-item" bindtap="goMenu" data-url="/pages/mypet/mypet">
+      <view class="stat-value">{{myPetCount}}</view>
+      <view class="stat-label">我的发布</view>
+    </view>
+    <view class="stat-item" bindtap="goMenu" data-url="/pages/apply/apply">
+      <view class="stat-value">{{myApplyCount}}</view>
+      <view class="stat-label">我的申请</view>
+    </view>
+    <view class="stat-item" bindtap="goMenu" data-url="/pages/favorite/favorite">
+      <view class="stat-value">{{myFavoriteCount}}</view>
+      <view class="stat-label">我的收藏</view>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="card menu-card">
+    <view
+      class="menu-item"
+      wx:for="{{menus}}"
+      wx:key="key"
+      bindtap="goMenu"
+      data-url="{{item.url}}"
+    >
+      <text class="menu-icon">{{item.icon}}</text>
+      <view class="menu-body">
+        <view class="menu-title">{{item.title}}</view>
+        <view class="menu-desc">{{item.desc}}</view>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 关于 -->
+  <view class="card about-card">
+    <view class="about-title">关于系统</view>
+    <view class="about-row">
+      <text class="about-label">系统名称</text>
+      <text class="about-value">Java1234 微信小程序宠物领养系统</text>
+    </view>
+    <view class="about-row">
+      <text class="about-label">所属项目</text>
+      <text class="about-value">本科毕业设计</text>
+    </view>
+    <view class="about-row">
+      <text class="about-label">核心理念</text>
+      <text class="about-value">领养代替购买</text>
+    </view>
+  </view>
+</view>

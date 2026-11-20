@@ -1,0 +1,159 @@
+<!-- 发布领养信息页 -->
+<view class="publish-page">
+  <!-- 未登录提示 -->
+  <view class="card login-tip" wx:if="{{!hasToken}}">
+    <text class="tip-icon">🔒</text>
+    <text class="tip-text">登录后才能发布领养信息</text>
+    <view class="tip-btn" bindtap="goLogin">去登录</view>
+  </view>
+
+  <block wx:else>
+    <!-- 宠物昵称与分类 -->
+    <view class="card form-card">
+      <view class="field">
+        <text class="field-label">宠物昵称<text class="required">*</text></text>
+        <input
+          class="field-input"
+          type="text"
+          placeholder="给它取个可爱的名字"
+          value="{{form.name}}"
+          data-field="name"
+          bindinput="onInput"
+        />
+      </view>
+
+      <view class="field">
+        <text class="field-label">所属分类<text class="required">*</text></text>
+        <view class="chip-group">
+          <view
+            class="chip {{form.categoryId === item.id ? 'active' : ''}}"
+            wx:for="{{categories}}"
+            wx:key="id"
+            data-id="{{item.id}}"
+            bindtap="selectCategory"
+          >
+            {{item.icon}} {{item.name}}
+          </view>
+        </view>
+      </view>
+
+      <view class="field">
+        <text class="field-label">年龄</text>
+        <input
+          class="field-input"
+          type="text"
+          placeholder="如：3个月 / 2岁"
+          value="{{form.age}}"
+          data-field="age"
+          bindinput="onInput"
+        />
+      </view>
+
+      <view class="field">
+        <text class="field-label">性别</text>
+        <view class="chip-group">
+          <view
+            class="chip {{form.gender === item ? 'active' : ''}}"
+            wx:for="{{genders}}"
+            wx:key="*this"
+            data-value="{{item}}"
+            bindtap="selectGender"
+          >
+            {{item}}
+          </view>
+        </view>
+      </view>
+
+      <view class="field">
+        <text class="field-label">所在城市<text class="required">*</text></text>
+        <input
+          class="field-input"
+          type="text"
+          placeholder="请输入所在城市"
+          value="{{form.city}}"
+          data-field="city"
+          bindinput="onInput"
+        />
+      </view>
+
+      <view class="field">
+        <text class="field-label">领养费用（元，0 表示免费）</text>
+        <input
+          class="field-input"
+          type="number"
+          placeholder="请输入领养费用"
+          value="{{form.price}}"
+          data-field="price"
+          bindinput="onInput"
+        />
+      </view>
+
+      <view class="field">
+        <text class="field-label">健康状况</text>
+        <input
+          class="field-input"
+          type="text"
+          placeholder="如：健康，已接种三针疫苗"
+          value="{{form.health}}"
+          data-field="health"
+          bindinput="onInput"
+        />
+      </view>
+
+      <view class="field">
+        <text class="field-label">防疫情况</text>
+        <view class="chip-group">
+          <view
+            class="chip {{form.vaccine === 1 ? 'active' : ''}}"
+            data-field="vaccine"
+            bindtap="toggleFlag"
+          >
+            💉 已接种疫苗
+          </view>
+          <view
+            class="chip {{form.sterilized === 1 ? 'active' : ''}}"
+            data-field="sterilized"
+            bindtap="toggleFlag"
+          >
+            ✂️ 已绝育
+          </view>
+          <view
+            class="chip {{form.deworm === 1 ? 'active' : ''}}"
+            data-field="deworm"
+            bindtap="toggleFlag"
+          >
+            🧴 已驱虫
+          </view>
+        </view>
+      </view>
+
+      <view class="field">
+        <text class="field-label">详细介绍<text class="required">*</text></text>
+        <textarea
+          class="field-textarea"
+          placeholder="介绍一下它的性格、习惯与故事吧"
+          value="{{form.description}}"
+          data-field="description"
+          bindinput="onInput"
+        />
+      </view>
+    </view>
+
+    <!-- 图片上传 -->
+    <view class="card form-card">
+      <view class="field-label">宠物照片</view>
+      <view class="image-grid">
+        <view class="image-item" wx:for="{{images}}" wx:key="*this">
+          <image class="image-preview" src="{{item}}" mode="aspectFill" data-src="{{item}}" bindtap="previewImage" />
+          <view class="image-remove" catchtap="removeImage" data-index="{{index}}">✕</view>
+        </view>
+        <view class="image-add" wx:if="{{images.length < 5}}" bindtap="chooseImage">
+          <text class="add-icon">＋</text>
+          <text class="add-text">添加照片</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="submit-btn" bindtap="submit">{{submitting ? '发布中...' : '发布领养信息'}}</view>
+  </block>
+</view>

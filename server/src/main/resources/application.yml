@@ -1,0 +1,56 @@
+# =====================================================================
+#  Java1234 微信小程序宠物领养系统 —— 后端服务配置文件
+# =====================================================================
+server:
+  # 后端服务端口
+  port: 8081
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: pet-adoption-server
+  # 数据源配置：MySQL8 端口 3308
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/pet_adoption?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  # 文件上传大小限制
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  configuration:
+    # 开启驼峰命名自动映射：数据库 create_time -> 实体 createTime
+    map-underscore-to-camel-case: true
+    # 打印执行的 SQL，便于调试
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+    db-config:
+      # 主键策略：数据库自增
+      id-type: auto
+      # 逻辑删除字段配置
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# 自定义业务配置
+pet:
+  # JWT 令牌配置
+  jwt:
+    # 签名密钥（毕业设计简化配置）
+    secret: java1234-pet-adoption-secret-key-2026
+    # 令牌有效期（毫秒），默认 7 天
+    expire: 604800000
+  # 文件上传根目录：统一存放到 D 盘 uploads 目录
+  upload:
+    path: D:/uploads
+    # 外部访问前缀
+    prefix: /uploads

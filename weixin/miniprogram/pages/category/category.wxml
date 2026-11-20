@@ -1,0 +1,80 @@
+<!-- 分类筛选页 -->
+<view class="category-page">
+  <!-- 分类选择 -->
+  <view class="card filter-card">
+    <view class="filter-title">🐶 选择分类</view>
+    <view class="chip-group">
+      <view
+        class="chip {{categoryId === 0 ? 'active' : ''}}"
+        bindtap="selectCategory"
+        data-id="0"
+      >
+        全部
+      </view>
+      <view
+        class="chip {{categoryId === item.id ? 'active' : ''}}"
+        wx:for="{{categories}}"
+        wx:key="id"
+        bindtap="selectCategory"
+        data-id="{{item.id}}"
+      >
+        {{item.icon}} {{item.name}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 性别筛选 -->
+  <view class="card filter-card">
+    <view class="filter-title">⚧️ 选择性别</view>
+    <view class="chip-group">
+      <view class="chip {{gender === '' ? 'active' : ''}}" bindtap="selectGender" data-value="">全部</view>
+      <view class="chip {{gender === '弟弟' ? 'active' : ''}}" bindtap="selectGender" data-value="弟弟">弟弟</view>
+      <view class="chip {{gender === '妹妹' ? 'active' : ''}}" bindtap="selectGender" data-value="妹妹">妹妹</view>
+    </view>
+  </view>
+
+  <!-- 城市筛选 -->
+  <view class="card filter-card">
+    <view class="filter-title">🏙️ 选择城市</view>
+    <view class="chip-group">
+      <view class="chip {{city === '' ? 'active' : ''}}" bindtap="selectCity" data-value="">全部</view>
+      <view
+        class="chip {{city === item ? 'active' : ''}}"
+        wx:for="{{cities}}"
+        wx:key="*this"
+        bindtap="selectCity"
+        data-value="{{item}}"
+      >
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 筛选结果 -->
+  <view class="result-head">
+    <text class="result-title">筛选结果（{{pets.length}} 只）</text>
+    <text class="reset-btn" bindtap="resetFilter">重置筛选</text>
+  </view>
+
+  <view class="pet-grid">
+    <view class="pet-card" wx:for="{{pets}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+      <image class="pet-cover" src="{{item.coverUrl}}" mode="aspectFill" lazy-load />
+      <view class="pet-body">
+        <view class="pet-name ellipsis">{{item.name}}</view>
+        <view class="pet-meta ellipsis">{{item.age}} · {{item.city}}</view>
+        <view class="pet-price {{item.price > 0 ? 'has-price' : 'free'}}">
+          {{item.price > 0 ? '¥' + item.price : '免费'}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-tip" wx:if="{{!pets.length && !loading}}">
+    <text class="empty-icon">🔍</text>
+    <text>没有符合条件的宠物，试试调整筛选条件</text>
+  </view>
+
+  <view class="load-more" wx:if="{{pets.length}}">
+    {{loading ? '加载中...' : (noMore ? '已经到底啦 ~' : '上拉加载更多')}}
+  </view>
+</view>

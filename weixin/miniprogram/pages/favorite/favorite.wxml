@@ -1,0 +1,23 @@
+<!-- 我的收藏页 -->
+<view class="favorite-page">
+  <view class="pet-grid">
+    <view class="pet-card" wx:for="{{pets}}" wx:key="id">
+      <view class="cover-wrap" bindtap="goDetail" data-id="{{item.id}}">
+        <image class="pet-cover" src="{{item.coverUrl}}" mode="aspectFill" lazy-load />
+        <view class="remove-btn" catchtap="removeFavorite" data-id="{{item.id}}">取消收藏</view>
+      </view>
+      <view class="pet-body" bindtap="goDetail" data-id="{{item.id}}">
+        <view class="pet-name ellipsis">{{item.name}}</view>
+        <view class="pet-meta ellipsis">{{item.age}} · {{item.city}} · {{item.categoryName}}</view>
+        <view class="pet-price {{item.price > 0 ? 'has-price' : 'free'}}">
+          {{item.price > 0 ? '¥' + item.price : '免费领养'}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty-tip" wx:if="{{!pets.length && !loading}}">
+    <text class="empty-icon">❤️</text>
+    <text>还没有收藏任何宠物，去首页逛逛吧</text>
+  </view>
+</view>
